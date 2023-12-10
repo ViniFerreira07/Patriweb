@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title> PatriWeb </title>
+</head>
+<body>
+	<div id="principal">
+		<header>
+			<div id="cabecalho">
+				<div class="row">
+					<div id="icone" class="col-6">
+						<img src="imagens/IconPatriWeb.png" class="icone-patriota">
+					</div>
+
+					<div id="menu" class="col-6">
+						<ul class="nav nav-pills">
+						  <li class="nav-item">
+						    <a class="nav-link" aria-current="page" href="#">Produtos</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link" href="#">Notícias</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link" href="#">Pesquisas</a>
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div id="texto-principal">
+				<p class="texto1">
+					BRASIL ACIMA DE TUDO DEUS ACIMA DE TODOS
+				</p>
+				<p class="texto2">
+					Estamos em guerra pelo Brasil! E você, soldado fiel, encontra aqui os argumentos necessários para vencer a guerra ideológica contra o comunismo. Pela família e pela pátria!
+				</p>
+
+				<button id="botao-mensagem" type="button" class="btn btn-warning gerar-mensagem">Gerar Mensagem</button>
+			</div>
+
+			<div class="texto-principal">
+			  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+			  <textarea id="area-mensagem" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+			</div>
+		</main>
+
+		<footer id="rodape">
+			<div class="rodape-principal">
+				<p>
+					&copy Copyright - Patriota Corporation - 2022
+				</p>
+			</div>
+		</footer>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script>
+	    
+	    var qtd = 0;
+
+		var texto1 = ["O Lula ", "O STF ", "A turma dos governadores ", "O PT ", "A Dilma ", "A Nova Ordem Mundial ", "O Bill Gates ", "O Leonardo DiCaprio ", "O George Soros ", "O Jean Wyllys ", "A Maria do Rosário "];
+
+		var texto2 = ["planeja ", "tem planos para ", "quer ", "só quer ", "trama ", "idealiza ", "apoia "];
+
+		var texto3 = ["destruir a família. ", "implantar o comunismo no Brasil. ", "distribuir kit gay nas escolas. ", "proteger bandidos. ", "promover a corrupção em solo brasileiro. ", "perseguir o presidente Bolsonaro. ", "ensinar ideologia de gênero nas escolas. ", "financiar ditaduras socialistas. ", "entregar o Brasil à China. "];
+
+		var texto4 = ["Precisamos ", "Devemos ", "Temos o dever moral de ", "Temos a obrigação, como cidadãos de bem, de "];
+
+		var texto5 = ["impedir ", "acabar com ", "exterminar ", "prender ", "destruir "];
+
+		var texto6 = ["a ditadura gayzista ", "os petistas ", "os inimigos da nação ", "o lulismo ", "os corruptos ", "os ministros do STF ", "os direitos humanos ", "os corruptos ", "os esquerdistas ", "os vagabundos ", "os comunistas ", "os globalistas "];
+
+		var texto7 = ["e apoiar ", "e aprovar ", "e sustentar ", "e adotar ", "e firmar "];
+
+		var texto8 = ["o voto impresso ", "a Intervenção Militar ", "o porte de armas ", "a criminalização do comunismo ", "medidas contra a esquerda ", "os valores da família tradicional ", "a teoria da terra plana ", "os ensinamentos do professor Olavo ", "o Escola sem Partido "];
+
+		var texto9 = ["para salvar o Brasil.", "com o objetivo de reeleger o presidente Bolsonaro.", "para acabar com a esquerda.", "para ajudar os cidadãos de bem.", "para limpar o país dos corruptos.", "para destruir o comunismo.", "para a volta do Trump à presidência.", "para boicotar a Globo.", "visando armar a população.", "com o intuito de defender a família.", "para salvar as crianças da ideologia de gênero."];
+
+		function insertText(text) {
+		    document.getElementById("area-mensagem").innerHTML = text;
+		}
+
+	    var link = document.getElementById('botao-mensagem');
+	    link.addEventListener('click', function() {
+	    	const randomElement1 = texto1[Math.floor(Math.random() * texto1.length)];
+			const randomElement2 = texto2[Math.floor(Math.random() * texto2.length)];
+			const randomElement3 = texto3[Math.floor(Math.random() * texto3.length)];
+			const randomElement4 = texto4[Math.floor(Math.random() * texto4.length)];
+			const randomElement5 = texto5[Math.floor(Math.random() * texto5.length)];
+			const randomElement6 = texto6[Math.floor(Math.random() * texto6.length)];
+			const randomElement7 = texto7[Math.floor(Math.random() * texto7.length)];
+			const randomElement8 = texto8[Math.floor(Math.random() * texto8.length)];
+			const randomElement9 = texto9[Math.floor(Math.random() * texto9.length)];
+
+			const randomText = randomElement1.concat(randomElement2, randomElement3, randomElement4, randomElement5, randomElement6, randomElement7, randomElement8, randomElement9);
+
+	        insertText(randomText);
+	    });
+
+	   
+	</script>
+</body>
+</html>
